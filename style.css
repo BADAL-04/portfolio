@@ -127,7 +127,7 @@ section {
 }
 
 .home.show-animate .home-content .text-animate h3 {
-    animation: homeBgText 6s linear infinite;
+    animation: homeBgText 2s linear infinite;
     animation-delay: 2s;
 }
 
@@ -252,6 +252,9 @@ section {
     background: var(--main-color);
     z-index: -1;
     transition: .5s;
+}
+.twitter{
+    color: #fff ;
 }
 
 .home-sci a:hover::before {
@@ -960,3 +963,65 @@ section:nth-child(odd) .animate.scroll,
         width: 0;
     }
 }
+
+
+/* Download CV Button */
+.download-cv-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18rem;
+    height: 5rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    color: var(--bg-color);
+    transition: .5s;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.download-cv-btn:hover {
+    color: var(--main-color);
+}
+
+.download-cv-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.download-cv-btn:hover::before {
+    width: 100%;
+}
+
+.download-cv-btn i {
+    margin-right: 1rem;
+}
+
+.download-cv-btn a {
+    color: var(--bg-color);
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Example usage of the button */
+.download-cv-btn a {
+    padding: 1rem 2rem;
+}
+
+
+
+
+
+

@@ -47,3 +47,28 @@ window.onscroll = () => {
 
     footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 }
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) { // Adjust the scroll threshold as needed
+        header.classList.add('blur');
+    } else {
+        header.classList.remove('blur');
+    }
+});
+
+document.getElementById('download-cv-btn').addEventListener('click', () => {
+    // Specify the path to your CV file
+    const cvPath = './assets/Resume_Badal.pdf';
+
+    // Create an <a> element dynamically
+    const link = document.createElement('a');
+    link.href = cvPath; // Set the file path
+    link.download = 'Resume_Badal.pdf'; // Set the file name for download
+    link.style.display = 'none'; // Hide the link
+
+    // Append the link to the body, click it programmatically, then remove it
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+});
+
