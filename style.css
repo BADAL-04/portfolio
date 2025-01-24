@@ -129,6 +129,8 @@ section {
 .home.show-animate .home-content .text-animate h3 {
     animation: homeBgText 6s linear infinite;
     animation-delay: 1s;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 1s;
 }
 
 .home-content .text-animate h3::before {
@@ -144,6 +146,7 @@ section {
 
 .home.show-animate .home-content .text-animate h3::before {
     animation: homeCursorText 6s linear infinite;
+    animation-delay: 1s;
     animation-delay: 1s;
 }
 
